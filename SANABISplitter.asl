@@ -29,7 +29,7 @@ isLoading{
 
 gameTime{
     if(current.igt < old.igt){
-        vars.totalTime = vars.totalTime + old.igt;
+        vars.totalTime = Math.Round(vars.totalTime + old.igt, 2);
     }
-    return TimeSpan.FromSeconds(vars.totalTime + current.igt);
+    return TimeSpan.FromSeconds(Math.Round(vars.totalTime + current.igt, 2));
 }
